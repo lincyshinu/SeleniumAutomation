@@ -239,6 +239,11 @@ public void tc_06_verifyRegistrationUsingRandomGenerator() {
 	Assert.assertEquals(act_email, emailId, "Invalid Email");
 	
 	}
+@Test
+public void tc_007_verifyloginWithParameters()
+{
+	
+}
 
 
 }
