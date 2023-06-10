@@ -242,7 +242,7 @@ public void tc_06_verifyRegistrationUsingRandomGenerator() {
 @Test
 public void tc_007_verifyloginWithParameters()
 {
-	
+	driver.get("https://demowebshop.tricentis.com/");
 }
 
 
