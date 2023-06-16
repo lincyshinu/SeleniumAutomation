@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Parallel testing]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Firefox Test(failed)">
+<suite name="Failed suite [Parameter Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Chrome Test(failed)">
     <parameter name="uName" value="lincylal123@yopmail.com"/>
-    <parameter name="browser" value="Firefox"/>
+    <parameter name="browser" value="Chrome"/>
     <parameter name="base_url" value="https://demowebshop.tricentis.com/"/>
     <parameter name="pWord" value="lincylal"/>
+    <groups>
+      <run>
+        <include name="Regression"/>
+        <include name="Sanity"/>
+        <exclude name="Smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="seliniumcommands.DemoWebShop">
         <methods>
           <include name="setup"/>
-          <include name="tc_008_verifyRegistrationUsingRandomGenerator"/>
-          <include name="tearDown"/>
+          <include name="tc_005_verifyRegistrationFromExcelSheet"/>
         </methods>
       </class> <!-- seliniumcommands.DemoWebShop -->
     </classes>
-  </test> <!-- Firefox Test(failed) -->
-</suite> <!-- Failed suite [Parallel testing] -->
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [Parameter Suite] -->
